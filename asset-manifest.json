@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/petshopcity/static/css/main.74e2db20.css",
-    "main.js": "/petshopcity/static/js/main.55e06931.js",
+    "main.css": "/petshopcity/static/css/main.88d5aa79.css",
+    "main.js": "/petshopcity/static/js/main.e3c64cff.js",
     "index.html": "/petshopcity/index.html",
-    "main.74e2db20.css.map": "/petshopcity/static/css/main.74e2db20.css.map",
-    "main.55e06931.js.map": "/petshopcity/static/js/main.55e06931.js.map"
+    "main.88d5aa79.css.map": "/petshopcity/static/css/main.88d5aa79.css.map",
+    "main.e3c64cff.js.map": "/petshopcity/static/js/main.e3c64cff.js.map"
   },
   "entrypoints": [
-    "static/css/main.74e2db20.css",
-    "static/js/main.55e06931.js"
+    "static/css/main.88d5aa79.css",
+    "static/js/main.e3c64cff.js"
   ]
 }
