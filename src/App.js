@@ -39,18 +39,36 @@ function App() {
         { nome: 'Vai Rex', distancia: 1.7, precoPequenosSemana: 15, precoGrandesSemana: 50, precoPequenosFds: 20, precoGrandesFds: 55 },
         { nome: 'ChowChawgas', distancia: 0.8, precoPequenos: 30, precoGrandes: 45 }
       ];
-  
-      const calcularPrecoTotal = (petshop) => {
-        const precoPequenos = (diaSemana >= 1 && diaSemana <= 5) ? petshop.precoPequenosSemana : petshop.precoPequenosFds;
-        const precoGrandes = (diaSemana >= 1 && diaSemana <= 5) ? petshop.precoGrandesSemana : petshop.precoGrandesFds;
-        const precoTotal = (parseInt(quantidadePequenos) * precoPequenos) + (parseInt(quantidadeGrandes) * precoGrandes);
-        return { nome: petshop.nome, precoTotal };
-      };
-  
-      const precosTotais = petshops.map(calcularPrecoTotal);
-      const melhorPetshop = precosTotais.reduce((melhor, atual) => (atual.precoTotal < melhor.precoTotal ? atual : melhor));
-  
-      setResultado({ melhorPetshop: melhorPetshop.nome, precoTotal: melhorPetshop.precoTotal });
+
+
+
+
+const calcularPrecoTotal = (petshop) => {
+  const precoPequenos = (diaSemana >= 1 && diaSemana <= 5) ? petshop.precoPequenosSemana : petshop.precoPequenosFds;
+  const precoGrandes = (diaSemana >= 1 && diaSemana <= 5) ? petshop.precoGrandesSemana : petshop.precoGrandesFds;
+  const precoTotal = (parseInt(quantidadePequenos) * precoPequenos) + (parseInt(quantidadeGrandes) * precoGrandes);
+  return { nome: petshop.nome, precoTotal, distancia: petshop.distancia }; // Adicionando a distância ao objeto retornado
+};
+
+const precosTotais = petshops.map(calcularPrecoTotal);
+
+// Ordenando os petshops por preço e depois por proximidade em caso de empate de preços
+precosTotais.sort((a, b) => {
+  if (a.precoTotal === b.precoTotal) {
+    return a.distancia - b.distancia; // Se os preços forem iguais, escolhe o mais próximo
+  }
+  return a.precoTotal - b.precoTotal; // Senão, escolhe o mais barato
+});
+
+// Agora o primeiro elemento de precosTotais será o melhor petshop após considerar preço e proximidade em caso de empate
+const melhorPetshop = precosTotais[0];
+
+setResultado({ melhorPetshop: melhorPetshop.nome, precoTotal: melhorPetshop.precoTotal });
+
+
+
+
+
       setErro('');
 
       setData(null);
