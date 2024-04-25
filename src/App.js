@@ -78,9 +78,10 @@ function App() {
 
       <div className='logo-title'>
       <img src={process.env.PUBLIC_URL + '/img/logo.png'} alt=""></img>
+      <h1 className="title">Pet Shop City</h1>
       </div>      
            
-        <h1 className="title">Pet Shop City</h1>
+        
   
 
       
@@ -107,7 +108,7 @@ function App() {
         {erro && <div className="erro">{erro}</div>}
       </div>
 
-      {mostrarResultado && resultado.melhorPetshop && (
+      {resultado.melhorPetshop && (
         <main className="main">
           <h2>Resultado do cálculo</h2>
           <span>Melhor canil: {resultado.melhorPetshop}</span>

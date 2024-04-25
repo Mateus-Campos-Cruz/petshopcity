@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+**Instruções para Executar o Sistema:**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. **Pré-requisitos:**
+   - Node.js instalado na sua máquina.
+   - Um editor de código como Visual Studio Code, Sublime Text, ou outro de sua preferência.
 
-## Available Scripts
+2. **Passos:**
+   - Clone o repositório do projeto para o seu ambiente local.
+   - Abra o terminal na pasta do projeto.
 
-In the project directory, you can run:
+3. **Instalação das Dependências:**
+   - Execute o comando `npm install` no terminal para instalar todas as dependências necessárias.
 
-### `npm start`
+4. **Execução em Ambiente de Desenvolvimento:**
+   - Para iniciar o servidor de desenvolvimento, utilize o comando `npm start`. Isso abrirá o projeto no seu navegador padrão.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5. **Build do Projeto:**
+   - Para gerar uma versão otimizada para produção, utilize o comando `npm run build`. Isso criará a pasta `build` com os arquivos necessários para deploy.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+6. **Deploy:**
+   - Se desejar implantar o projeto em um servidor ou em plataformas como GitHub Pages, utilize o comando `npm run deploy`. Certifique-se de configurar corretamente a homepage no arquivo `package.json`.
+Link para acessar o site: https://mateus-campos-cruz.github.io/petshopcity/
 
-### `npm test`
+7. **Acesso ao Sistema:**
+   - Após seguir os passos acima, você poderá acessar o sistema pelo navegador utilizando o endereço gerado durante o processo de execução em ambiente de desenvolvimento ou o endereço de deploy, caso tenha feito o deploy em um servidor.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+**Lista de Premissas Assumidas:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. O sistema é desenvolvido utilizando a linguagem de programação JavaScript e a biblioteca React.
+2. Os dados são manipulados localmente no front-end e não há integração com um banco de dados ou servidor back-end.
+3. O sistema é destinado ao cálculo de preços para serviços específicos, como banho de cães, baseando-se em dados inseridos nos campos reservados.
+4. O sistema não possui funcionalidades de autenticação ou gerenciamento de usuários.
+5. Os requisitos de sistema incluem um navegador web moderno e uma conexão com a internet para carregar recursos externos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Decisões de Projeto:**
 
-### `npm run eject`
+1. **Tecnologia:**
+   - Utilização do React como biblioteca principal para o desenvolvimento front-end devido à sua eficiência, modularidade e popularidade na comunidade de desenvolvimento web.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Componentização:**
+   - Estruturação do sistema em componentes reutilizáveis para facilitar a manutenção e escalabilidade do código.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Estilização:**
+   - Utilização de arquivos de estilo CSS separados para manter a separação de preocupações entre estrutura, apresentação e responsividade.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Gestão de Estado:**
+   - Utilização de hooks do React, como useState e useEffect, para gerenciar o estado da aplicação e controlar o ciclo de vida dos componentes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. **Validação de Dados:**
+   - Implementação de validações front-end para garantir que os dados inseridos pelo usuário estejam corretos antes do processamento.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Considerações Importantes:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Testes:**
+   - Recomenda-se a implementação de testes unitários e de integração para garantir a qualidade e robustez do sistema em diferentes cenários.
 
-### Code Splitting
+2. **Acessibilidade:**
+   - É importante garantir que o sistema seja acessível para usuários com necessidades especiais, seguindo as diretrizes de acessibilidade web.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. **Documentação:**
+   - Gerar a documentação do código atualizada e clara para facilitar o entendimento e colaboração entre membros da equipe ou futuros desenvolvedores.
+4. **Monitoramento:**
+   - Considerar a implementação de ferramentas de monitoramento e análise de desempenho para identificar e resolver possíveis problemas de performance ou erros no sistema.
