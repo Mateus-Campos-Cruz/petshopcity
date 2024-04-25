@@ -10,6 +10,7 @@ function App() {
   const [quantidadeGrandes, setQuantidadeGrandes] = useState('');
   const [resultado, setResultado] = useState({ melhorPetshop: '', precoTotal: 0 });
   const [erro, setErro] = useState('');
+  const [mostrarResultado, setMostrarResultado] = useState(false); 
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -56,9 +57,19 @@ function App() {
       setQuantidadePequenos('');
       setQuantidadeGrandes('');
 
+      setMostrarResultado(true);
+
     } catch (error) {
       setErro(error.message);
     }
+  }
+
+  function handleClear() {
+    setData(null);
+    setQuantidadePequenos('');
+    setQuantidadeGrandes('');
+    setResultado({ melhorPetshop: '', precoTotal: 0 });
+    setMostrarResultado(false); // Ocultar a seção de resultado ao limpar
   }
   
 
@@ -81,12 +92,18 @@ function App() {
           />
           <input type="text" placeholder="Digite a quantidade de cães pequenos..." value={quantidadePequenos} onChange={(e) => setQuantidadePequenos(e.target.value)} />
           <input type="text" placeholder="Digite a quantidade de cães grandes..." value={quantidadeGrandes} onChange={(e) => setQuantidadeGrandes(e.target.value)} />
+          
+          <div className='buttonsForm'>
           <button type="submit" className="buttonSearch" onClick={handleSearch}>Calcular</button>
-        </form>
+          <button type="button" className="buttonSearch" onClick={handleClear}>Limpar</button> 
+          </div>
+          
+          </form>
+          
         {erro && <div className="erro">{erro}</div>}
       </div>
 
-      {resultado.melhorPetshop && (
+      {mostrarResultado && resultado.melhorPetshop && (
         <main className="main">
           <h2>Resultado do cálculo</h2>
           <span>Melhor canil: {resultado.melhorPetshop}</span>
