@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/petshopcity/static/css/main.74e2db20.css",
+    "main.js": "/petshopcity/static/js/main.55e06931.js",
+    "index.html": "/petshopcity/index.html",
+    "main.74e2db20.css.map": "/petshopcity/static/css/main.74e2db20.css.map",
+    "main.55e06931.js.map": "/petshopcity/static/js/main.55e06931.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74e2db20.css",
+    "static/js/main.55e06931.js"
+  ]
+}
