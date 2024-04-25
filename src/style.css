@@ -76,10 +76,10 @@
 }
 
 .containerForm input{
-    background-color: #000000ec;
+    background-color: #f1f1f1;
     border: 0;
     font-size: 20px;
-    color: #f1f1f1;
+    color: #000;
     outline: unset;
     margin-right: 8px;
     margin-bottom: 20px;
@@ -90,7 +90,7 @@
 
 
 .containerForm input::placeholder{
-    color: #f1f1f1;
+    color: #000;
     font-size: 18px;
 }
 
@@ -155,7 +155,7 @@
     }
 
     .containerForm input::placeholder{
-        color: #f1f1f1;
+        color: #000;
         font-size: 16px;
     }
 
