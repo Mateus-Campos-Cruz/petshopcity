@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './style.css';
-import ptBR from 'date-fns/locale/pt-BR'; // Importe o locale para português do Brasil
+import ptBR from 'date-fns/locale/pt-BR'; 
 
 function App() {
-  const [data, setData] = useState(null); // Alterado para null para iniciar sem data selecionada
+  const [data, setData] = useState(null); 
   const [quantidadePequenos, setQuantidadePequenos] = useState('');
   const [quantidadeGrandes, setQuantidadeGrandes] = useState('');
   const [resultado, setResultado] = useState({ melhorPetshop: '', precoTotal: 0 });
@@ -69,7 +69,7 @@ function App() {
     setQuantidadePequenos('');
     setQuantidadeGrandes('');
     setResultado({ melhorPetshop: '', precoTotal: 0 });
-    setMostrarResultado(false); // Ocultar a seção de resultado ao limpar
+    setMostrarResultado(false); 
   }
   
 
@@ -91,8 +91,8 @@ function App() {
             selected={data}
             onChange={(date) => setData(date)}
             dateFormat="dd/MM/yyyy"
-            locale={ptBR} // Definindo o locale para português do Brasil
-            placeholderText="Escolha uma data" // Texto do placeholder
+            locale={ptBR} 
+            placeholderText="Escolha uma data" 
           />
           <input type="text" placeholder="Digite a quantidade de cães pequenos..." value={quantidadePequenos} onChange={(e) => setQuantidadePequenos(e.target.value)} />
           <input type="text" placeholder="Digite a quantidade de cães grandes..." value={quantidadeGrandes} onChange={(e) => setQuantidadeGrandes(e.target.value)} />
