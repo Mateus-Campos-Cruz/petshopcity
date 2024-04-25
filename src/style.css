@@ -1,5 +1,5 @@
 .container{
-    height: 100vh;
+    height: 115vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,19 +7,26 @@
     background: linear-gradient( #8fd2f7, #d8e3e6);
 }
 
-.logo{
+.logo-title{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.logo img{
-    width: 100px;
+.logo-title img{
+    width: 120px;
+    border-radius: 20px;
+    margin-right:  10px;
+    
 }
 
 .title{
     font-size: 85px;
     animation: flipTitle 1s;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes flipTitle {
@@ -162,46 +169,5 @@
 
     .main{
         width: 80%;
-    }
-}
-
-
-@media (max-height: 700px){
-
-    body{
-        height: 780px;
-    }
-    .title{
-        font-size: 60px;
-    }
-
-    .containerForm input{
-        width: 100%;
-    }
-
-    .containerForm input::placeholder{
-        color: #00000071;
-        font-size: 14px;
-    }
-
-    .buttonSearch{
-        width: 40%;
-        font-size: 14px;
-    } 
-    .main h2{
-        font-size: 20px;
-    }
-
-    .main span{
-        font-size: 18px;
-    }
-
-    .main{
-        width: 80%;
-    }
-
-    .erro{
-        font-size: 10px;
-        color: #ff0000;
     }
 }

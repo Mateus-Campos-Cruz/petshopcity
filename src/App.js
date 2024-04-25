@@ -75,11 +75,15 @@ function App() {
 
   return (
     <div className="container">
-      <div className="logo">
-        <img src={process.env.PUBLIC_URL + '/img/logo.png'} alt=""></img>
-      </div>
 
-      <h1 className="title">Pet Shop City</h1>
+      <div className='logo-title'>
+      <img src={process.env.PUBLIC_URL + '/img/logo.png'} alt=""></img>
+      </div>      
+           
+        <h1 className="title">Pet Shop City</h1>
+  
+
+      
 
       <div className="containerForm">
         <form>
