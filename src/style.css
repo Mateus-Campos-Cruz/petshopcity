@@ -127,6 +127,7 @@
     align-items: center;
     flex-direction: column;
     width: 500px;
+    margin-bottom: 30px;
 }
 
 .main h2{
@@ -144,28 +145,41 @@
         font-size: 60px;
     }
 
-    .containerForm input{
-        width: 100%;
+    .containerForm {
+        width: 80%;
+    }
+
+    .containerForm input,
+    .containerForm select {
+    width: 100%;
     }
 
     .containerForm input::placeholder{
         color: #00000071;
-        font-size: 14px;
+        font-size: 16px;
     }
+
 
     .buttonSearch{
         width: 40%;
-        font-size: 14px;
+        font-size: 16px;
     } 
-    .main h2{
-        font-size: 20px;
-    }
-
-    .main span{
-        font-size: 18px;
-    }
 
     .main{
         width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .main h2{
+        font-size: 24px;
+    }
+
+    .main span{
+        font-size: 20px;
+    }
+
+
+    .erro{
+        font-size: 12px;
     }
 }

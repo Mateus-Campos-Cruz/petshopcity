@@ -95,8 +95,34 @@ function App() {
             locale={ptBR} 
             placeholderText="Escolha uma data" 
           />
-          <input type="text" placeholder="Digite a quantidade de cães pequenos..." value={quantidadePequenos} onChange={(e) => setQuantidadePequenos(e.target.value)} />
-          <input type="text" placeholder="Digite a quantidade de cães grandes..." value={quantidadeGrandes} onChange={(e) => setQuantidadeGrandes(e.target.value)} />
+          <input 
+  type="text" 
+  placeholder="Digite a quantidade de cães pequenos..." 
+  value={quantidadePequenos} 
+  onChange={(e) => {
+    const value = e.target.value;
+    if (/^\d*$/.test(value)) { 
+      setQuantidadePequenos(value);
+    } else {
+      setQuantidadePequenos(''); 
+    }
+  }} 
+/>
+
+<input 
+  type="text" 
+  placeholder="Digite a quantidade de cães grandes..." 
+  value={quantidadeGrandes} 
+  onChange={(e) => {
+    const value = e.target.value;
+    if (/^\d*$/.test(value)) { 
+      setQuantidadeGrandes(value);
+    } else {
+      setQuantidadeGrandes('');
+    }
+  }} 
+/>
+
           
           <div className='buttonsForm'>
           <button type="submit" className="buttonSearch" onClick={handleSearch}>Calcular</button>
