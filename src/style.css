@@ -50,10 +50,10 @@
 }
 
 .containerForm select{
-    background-color: #fff;
+    background-color: #000;
     border: 0;
     font-size: 18px;
-    color: #000000;
+    color: #fff;
     outline: unset;
     margin-right: 8px;
     margin-bottom: 20px;
@@ -76,10 +76,10 @@
 }
 
 .containerForm input{
-    background-color: #f1f1f1;
+    background-color: #000000d5;
     border: 0;
     font-size: 20px;
-    color: #000;
+    color: #f1f1f1;
     outline: unset;
     margin-right: 8px;
     margin-bottom: 20px;
@@ -90,7 +90,7 @@
 
 
 .containerForm input::placeholder{
-    color: #000000;
+    color: #f1f1f1;
     font-size: 18px;
 }
 
